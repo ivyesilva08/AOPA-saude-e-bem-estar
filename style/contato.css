@@ -1,0 +1,10 @@
+
+@import './complements/reset.css';
+@import './complements/navbar.css';
+
+body {
+  
+   background-color: #FFFAFA;
+}
+
+

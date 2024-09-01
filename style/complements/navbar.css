@@ -1,0 +1,42 @@
+@import 'reset.css';
+body {
+    margin: 0;
+    
+    background-color: azure;
+ }
+ 
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFAFA;
+    padding: 10px 20px;
+ }
+ 
+ .logo {
+    width: 155px;
+    height: 45px;
+ }
+ 
+ .nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ .nav-item {
+    margin-left: 20px;
+ }
+ 
+ .nav-item a {
+    text-decoration: none;
+    color: #9D8BB3;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+ }
+ 
+ .nav-item a:hover {
+    background-color: #b4dcd4;
+    border-radius: 4px;
+ }
