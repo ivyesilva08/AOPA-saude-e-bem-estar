@@ -1,7 +1,5 @@
 @import 'reset.css';
 body {
-    margin: 0;
-    
     background-color: azure;
  }
  
@@ -19,10 +17,8 @@ body {
  }
  
  .nav-list {
-    list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
+    
  }
  
  .nav-item {
@@ -34,6 +30,7 @@ body {
     color: #9D8BB3;
     padding: 8px 16px;
     transition: background-color 0.3s;
+    font-size: 17px;
  }
  
  .nav-item a:hover {
