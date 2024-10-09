@@ -2,9 +2,6 @@
 @import './complements/reset.css';
 @import './complements/navbar.css';
 .container-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #fff;
   border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -14,7 +11,7 @@
   max-width: 100%;
   min-height: 480px;
   margin-top: 40px;
-
+display: flex;
 }
 
 .container-login p {
@@ -204,3 +201,24 @@
 .container-login.active .toggle-right {
   transform: translateX(200%);
 }
+dialog{
+  margin-top: 60px;
+  margin-left: 280px;
+  border: none;
+  background-color: transparent;
+}
+button{
+  background-color: transparent;
+  border: none;
+  
+}
+ dialog::backdrop{
+  background-color: #8c77a788;
+ }
+
+main{
+padding: 50px;
+margin: 10px;
+
+}
+
