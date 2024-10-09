@@ -1,8 +1,11 @@
 
 @import './complements/reset.css';
 @import './complements/navbar.css';
+
+
 body {
    background-color: azure;
+   
 }
 
 
@@ -51,6 +54,7 @@ margin-top: 60px;
    display: flex;
    gap: 80px;
    margin-top: 50px;
+   
 }
 
 .card {
@@ -64,7 +68,9 @@ margin-top: 60px;
    box-shadow: 10px 10px 10px #ccc;
 }
 
-
+.card a{
+   text-decoration: none;
+}
   
 .card img {
    width: 100%;
@@ -79,3 +85,207 @@ margin-top: 60px;
    color: #9D8BB3;
 }
 
+
+
+
+
+
+html {
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+   font-family: sans-serif;
+}
+::-webkit-scrollbar {
+   height: 8px;
+   width: 8px;
+}
+::-webkit-scrollbar-thumb {
+   background: #9D8BB3;
+   border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+   background: rgba(255, 255, 255, 0);
+}
+
+
+
+
+
+
+
+
+
+.contato {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+padding: 100px;
+
+}
+.container-contact {
+  
+  display:grid;
+  grid-template-columns: repeat(2,50%);
+  padding:20px;
+  gap:10px;
+  width: 1000px;
+}
+
+.box-info {
+  color:black;
+  display:flex;
+  flex-direction: column;
+  gap:50px;
+}
+
+.box-info > h1 {
+  text-align: left;
+  letter-spacing: 5px;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap:25px
+}
+
+.data > p {
+  font-size: 1rem;
+}
+
+.data > p > i {
+  color:#9D8BB3;
+  margin-right: 10px;
+  font-size:25px;
+}
+
+
+
+.links {
+  display:flex;
+  gap:15px;
+}
+
+.links > a {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  background: #9D8BB3;
+  text-align: center;
+  transition: .1s;
+}
+
+.links > a > i {
+  color:#fff;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+form {
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  gap:15px;
+}
+
+.input-box {
+  position:relative;
+}
+
+.input-box > input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  outline:none;
+  background: rgba(255 255 255 / .1);
+  border:3px solid transparent;
+  letter-spacing: 1px;
+  transition:.3s;
+  color:black;
+  
+}
+
+.input-box > input::placeholder,
+.input-box > textarea::placeholder {
+  color:#a3a3a3;
+  
+}
+
+.input-box > input:focus::placeholder,
+.input-box > textarea:focus::placeholder {
+  color:transparent;
+}
+
+.input-box > input:focus,
+.input-box > textarea:focus {
+  border-bottom:3px solid c#9D8BB3;
+ animation: forwards 2s;
+}
+
+.input-box > textarea {
+  width: 100%;
+  height: 130px;
+  padding: 10px;
+  background: rgba(255 255 255 / .1);
+  border:3px solid transparent;
+  letter-spacing: 1px;
+  outline: none;
+  transition:.3s;
+  color:#fff;
+  letter-spacing: 1.5px;
+}
+
+
+.input-box > i {
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right: 10px;
+  color:rgba(255 255 255 / .3);
+  transition: .3s;
+}
+
+.input-box > input:focus ~ i {
+  color:#9D8BB3;
+}
+
+form > button {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  background: #9D8BB3;
+  color:#fff;
+  border:none;
+  transition: .1s;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+form > button:hover,
+.links > a:hover {
+  background: rgb(172, 16, 47);
+}
+
+
+
+
+@media screen and (max-width:600px) {
+  .container {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      gap:20px;
+  }
+
+  .box-info {
+      gap:15px;
+  }
+
+  .box-info > h1 {
+      font-size: 1.5rem;
+  }
+}

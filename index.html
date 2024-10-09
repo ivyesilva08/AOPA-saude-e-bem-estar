@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="style/index.css">
+<link rel="icon" type="image/x-icon" href="/assets/icon.svg">
 </head>
 <body>
   
@@ -20,13 +21,13 @@
             height="45px"
           /></a>
           <li class="nav-item"><a href="#" >Início</a></li>
-          <li class="nav-item"><a href="sobre.html" >Sobre</a></li>
+          <li class="nav-item"><a href="#sobre" >Sobre</a></li>
 
-          <li class="nav-item"><a href="news.html" target="_blank">Portal de notícias</a></li>
+          <li class="nav-item"><a href="#news" >Portal de notícias</a></li>
 
-          <li class="nav-item"><a href="news.html" >Portal de notícias</a></li>
+        
 
-          <li class="nav-item"><a href="contato.html" >Contato</a></li>
+          <li class="nav-item"><a href="#contato" >Contato</a></li>
          
           <li class="nav-item"><a href="perfil.html" ><i class="fa-solid fa-user" style="color: #9d8bb3;"></i></a></li>
         </ul>
@@ -69,7 +70,7 @@
             });
         });
     </script>
-   
+   <section>
  <div class="p1">
   <p id="texto"> <strong>Tenha uma vida plena</strong> <br> e viva como nunca! </p>
  
@@ -80,24 +81,26 @@
   texto.classList.add('animar');
 });
 </script>
+
+
 <div class="card-container">
   <div class="card" id="card1"> <a href="#">
       <img src="assets/img card 1.jpg" alt="Imagem 1">
       <div class="text">Participe dos desafios de exercícios e acumule pontos e saúde!</div></a>
   </div>
-  <div class="card" id="card2"> <a href="#">
+  <div class="card" id="card2"> <a href="#news">
       <img src="assets/img card 2.jpg" alt="Imagem 2">
       <div class="text">Fique por dentro das novidades sobre saúde e bem estar!
       
       </div>
   </div></a>
 </div>
-<script>// scripts.js
+<script>
   document.addEventListener('DOMContentLoaded', function() {
       const card1 = document.getElementById('card1');
       const card2 = document.getElementById('card2');
   
-      // Função para fazer os cards aparecerem com animação
+      
       function showCard(card, delay) {
           setTimeout(() => {
               card.style.opacity = '1';
@@ -105,13 +108,76 @@
           }, delay);
       }
   
-      // Mostrando os cards com um delay de 500ms entre eles
+     
       showCard(card1, 500);
       showCard(card2, 1000);
   });
-  </script>
+  </script></section>
 
+
+
+<section class="contato" >
+<div class="container-contact">
+  <div class="box-info">
+      <h1>CONTÁCTATE CON NOSOTROS</h1>
+      <div class="data">
+          <p> <i class="fa-solid fa-phone"></i> +1 408 224 4587</p>
+          <p> <i class="fa-solid fa-envelope"></i> livingcodedev@gmail.com</p>
+          <p> <div><i class="fa-solid fa-location-dot"></i></div> 30 Grant Ave San Francisco CA 94108-5834. USA</p>
+      </div>
+      <div class="links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+  </div>
+  <form>
+      <div class="input-box">
+          <input type="text" placeholder="Nombre y apellido" required>
+          <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="input-box">
+          <input type="email" required placeholder="Correo electrónico">
+          <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="input-box">
+          <input type="text" placeholder="Asunto">
+          <i class="fa-solid fa-pen-to-square"></i>
+      </div>
+      <div class="input-box">
+          <textarea placeholder="Escribe tu mensaje..."></textarea>
+      </div>
+      <button type="submit">Enviar mensaje</button>
+  </form>
+</div>
+</section>
+   
+<section class="section" id="news">
+      <h1>noticias</h1>
+
+      <a href="https://www.example.com/news">Read more</a>
+      <script src="./script/crawler.js"></script>
+    </section>
   
+
+    <section class="section" id="sobre">
+<h1> O que é o projeto?</h1>
+<p>
+  As Obras Pavonianas (AOPA) é uma organização que carrega o legado de amor e cuidado do Padre Ludovico Pavoni, um visionário que dedicou sua vida ao acolhimento da comunidade. Inspirados por sua missão, trabalhamos incansavelmente para oferecer suporte e recursos que promovam o bem-estar e a saúde de nossos idosos.
+  
+  Nosso projeto é dedicado a melhorar a qualidade de vida desse grupo tão especial. Fornecemos informações essenciais e recursos práticos que facilitam o acesso a cuidados de saúde, atividades de bem-estar e suporte emocional. Acreditamos que todos merecem envelhecer com dignidade, conforto e alegria, e estamos aqui para assegurar que nossos idosos recebam o cuidado que precisam e merecem.
+  
+  Com uma abordagem acolhedora e humana, a AOPA continua a seguir os passos do Padre Pavoni, construindo uma comunidade onde o respeito e o carinho pelos mais velhos são a base de tudo o que fazemos.</p>
+    </section>
+
+       
+    
+        <script src="./script/script.js"></script>
+   
+    <footer>
+
+    </footer>
 </body>
 
 </html>

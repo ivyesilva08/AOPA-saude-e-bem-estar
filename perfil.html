@@ -27,60 +27,63 @@
         <li class="nav-item"><a href="sobre.html">Sobre</a></li>
         <li class="nav-item"><a href="news.html">Portal de notícias</a></li>
         <li class="nav-item"><a href="contato.html">Contato</a></li>
-        <li class="nav-item"><a href="perfil.html"></a><i class="fa-solid fa-user" style="color: #9d8bb3;"></i></a></li>
+        <li class="nav-item"><a href="perfil.html"><i class="fa-solid fa-user" style="color: #9d8bb3;"></i></a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="container" id="container">
-    <div class="profile">
-      <div class="top-profile">
-        <div class="image-upload">
-          <label for="uploadImage" class="upload-label">
-            <img
-              src="https://scontent.xx.fbcdn.net/v/t1.15752-9/454483925_1947436412369528_8707381291655442840_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=lp9cLp7WvngQ7kNvgH_mry5&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QEeLPKIykgCszMjih2fLjGg0OJO5BX6BfSMyADRFcO_CA&oe=66DD8865"
-              id="uploadPreview" class="profile-pic">
-          </label>
-          <input id="uploadImage" type="file" name="foto" accept="image/jpeg, image/png" style="display: none;">
-        </div>
-
-        <div id="cropperModal" class="cropper-modal" style="display: none;">
-          <div class="cropper-container">
-            <img id="image" alt="Imagem para cortar">
-            <div class="cropper-buttons">
-              <button id="cropBtn" class="crop-button">Cortar</button>
-              <button id="cancelBtn" class="cancel-button">Cancelar</button>
+  <dialog>
+    <div class="container-login" id="container-login">
+            <div class="form-container sign-up">
+                <form>
+                    <h1>Cadastre-se</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g" style="color: #9d8bb3;"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f" style="color: #9d8bb3;"></i></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github" style="color: #9d8bb3;"></i></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in" style="color: #9d8bb3;"></i></i></a>
+                    </div>
+                    <span>ou use seu e-mail para o registro</span>
+                    <input type="text" placeholder="Nome">
+                    <input type="email" placeholder="E-mail">
+                    <input type="password" placeholder="Senha">
+                    <button>Cadastrar-se</button>
+                </form>
             </div>
-          </div>
+    
+            <div class="form-container sign-in">
+                <form>
+                    <h1>Login</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>Ou use seu e-mail e senha</span>
+                    <input type="email" placeholder="E-mail">
+                    <input type="password" placeholder="Senha">
+                    <a href="#">Esqueceu sua senha?</a>
+                    <button>Entrar</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Bem vindo de volta!</h1>
+                        <p>Já tem uma conta? Insira seus dados para entrar!</p>
+                        <button class="hidden" id="login">Entrar</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Olá!</h1>
+                        <p>Não tem uma conta ainda? Registre seus dados pessoais para utilizar os recursos do site!</p>
+                        <button class="hidden" id="register">Cadastrar-se</button>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="name">
-          <input type="text" id="textInput" placeholder="Seu nome">
-          <button id="submitButton">Enviar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container-2">
-    <div class="personal-dates">
-      <label for="input">idade</label>
-      <input type="number" name="idade" id="">
-      <button type="submit">salvar</button>
-      <form><label for="input">gênero</label>
-        <INPUT TYPE="RADIO" NAME="OPCAO" VALUE="male"> homem
-        <INPUT TYPE="RADIO" NAME="OPCAO" VALUE="female"> mulher
-        <INPUT TYPE="RADIO" NAME="OPCAO" VALUE="nb"> não binário
-        <button type="submit">salvar</button>
-        <div class="graphics">
-          <h1>acompanhe sua saúde</h1>
-          <canvas></canvas>
-        </div>
-    </div>
-    </form>
-
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.5.12/dist/cropper.min.js"></script>
-  <script src="perfil.js"></script>
+      </dialog>
 </body>
+
 
 </html>
