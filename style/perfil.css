@@ -1,6 +1,7 @@
 
 @import './complements/reset.css';
 @import './complements/navbar.css';
+@import './complements/footer.css';
 .container-login {
   background-color: #fff;
   border-radius: 30px;
@@ -216,9 +217,75 @@ button{
   background-color: #8c77a788;
  }
 
+
+
+
+
+
 main{
 padding: 50px;
 margin: 10px;
 
+}
+.container{
+  background-color: #ac9ac4;
+  border-radius: 10px;
+  height: 360px;
+overflow-y:scroll ;
+}
+
+
+main.container > div.videos{
+  margin-top: 20px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 20px;
+overflow: hidden;
+
+}
+
+
+.phrase-container{
+  padding: 50px;
+margin: 10px;
+  background-color: #ac9ac4;
+  border-radius: 10px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+}
+.phrase-container h2{
+  font-size: 40px;
+  font-weight: 900;
+  
+}
+.phrase-container h3{
+  color: black;
+  font-weight: 200;
+  font-size: 30px;
+  
+}
+figure.leaves{
+ margin-left: 900px;
+ margin-bottom: 300000px;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #9D8BB3;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
 }
 

@@ -1,7 +1,7 @@
 
 @import './complements/reset.css';
 @import './complements/navbar.css';
-
+@import './complements/footer.css';
 
 body {
    background-color: rgb(248, 250, 250);
@@ -57,9 +57,8 @@ margin-top: 60px;
    
 }
 
-.card {
+.card-top {
    width: 350px;
-   border: 1px solid #ccc;
    border-radius: 8px;
    overflow: hidden;
    opacity: 0; 
@@ -68,49 +67,22 @@ margin-top: 60px;
    box-shadow: 10px 10px 10px #ccc;
 }
 
-.card a{
+.card-top a{
    text-decoration: none;
 }
   
-.card img {
+.card-top img {
    width: 100%;
    height: auto;
 }
 
-.card .text {
+.card-top .text {
    padding: 15px;
    text-decoration: none;
    text-align: center;
    font-size: 25px;
    color: #9D8BB3;
 }
-
-
-
-
-
-
-html {
-   -webkit-text-size-adjust: 100%;
-   -ms-text-size-adjust: 100%;
-   font-family: sans-serif;
-}
-::-webkit-scrollbar {
-   height: 8px;
-   width: 8px;
-}
-::-webkit-scrollbar-thumb {
-   background: #9D8BB3;
-   border-radius: 3px;
-}
-::-webkit-scrollbar-track {
-   background: rgba(255, 255, 255, 0);
-}
-
-
-
-
-
 
 
 .contato {
@@ -269,19 +241,229 @@ form > button:hover,
 }
 
 
-.news img{
-width: 100vw;
+
+
+
+
+
+
+
+
+
+:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
 }
+
+#news h1{
+  margin-left: 60px;
+
+}
+.card{
+  list-style: none;
+  position: relative;
+  border: none;
+}
+
+.hero-section{
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+
+  
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+ 
+}
+
+.card__background{
+ 
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+
+.card__background1{
+  background-image: url(https://draalinegeriatra.com.br/wp-content/uploads/2022/10/Blog-Aline-4-1.jpg);
+
+}
+
+.card__background2{
+  background-image: url(../assets/mudançasclimaticas.png);
+}
+
+.card__background3{
+  background-image: url(https://midia.market/wp-content/uploads/2024/05/iStock-1367961786-1024x540.jpg);
+}
+.card__background4{
+  background-image:url(//www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/09/Choi-Soon-hwa-e1727700583954.jpg?w=1200&h=900&crop=1)
+}
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+  
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+  
+}
+
+.card__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+ 
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
 .sobre{
-  padding: 40px;
+margin-top: 80px;
+}
+.title{
+  background-color:#af9dc5;
+height: 150px;
+color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100dvw;
+margin-top: 40px;
+}
+.surto{
+  background-color: #af9dc5;
+  width: 100dvw;
+  height: 150px;
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 250px;
 }
 
 .sobre h1{
-  font-size: 40px;
+  margin-top: 20px;
+  font-size:60px;
+padding: 40px;
+}
+
+.overflow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column
+}
+
+.all section.overflow .fig {
+ position: absolute;
+}
+.title img{
+  margin-top: 150px;
+}
+.space{
+  background-color: #fff;
+  color: white;
+  height: 100px;
 }
 .sobre p{
   font-size: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+color: #2d3548;
 }
+html {
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+   font-family: sans-serif;
+   scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+   height: 8px;
+   width: 8px;
+}
+::-webkit-scrollbar-thumb {
+   background: #9D8BB3;
+   border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+   background: rgba(255, 255, 255, 0);
+}
+
+
+
+
+
+

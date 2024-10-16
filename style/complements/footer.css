@@ -1,0 +1,26 @@
+@import './reset.css';
+
+
+footer{
+    background-color: #6c9d77;
+  display: flex;
+  height: 250px;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  text-decoration: none;
+  
+  }
+  
+  footer a{
+    font-weight: 300;
+   font-size: smaller;
+   color: #fff;
+  }
+   footer a:hover{
+    color: crimson;
+   }
+  footer > a > img{
+    object-fit: cover;
+  }
